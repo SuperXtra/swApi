@@ -1,10 +1,11 @@
-Java 9.
+JDK 11. 
+* Application will not run with newer JDK (No LTS).
 
 To run application please start docker container by command:
 
-###
+***
 docker run --name swapi -it -p 8080:8080 softwareplant/swapi:latest
-###
+***
 
 and then start the application
 

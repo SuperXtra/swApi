@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import com.softwareplant.sw.service.mapping.ReportMappableImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.softwareplant.sw.exception.customErrors.*;
 import com.softwareplant.sw.models.dao.*;
@@ -17,6 +18,7 @@ public class ReportService {
     private final ReportBuilder service;
     private final ReportMappableImpl mapperImplementation;
 
+    @Autowired
     public ReportService(ReportRepository reportRepository, ReportBuilder service, ReportMappableImpl mapperImplementation) {
         this.reportRepository = reportRepository;
         this.service = service;

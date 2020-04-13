@@ -1,6 +1,7 @@
 package com.softwareplant.sw.service;
 
 import com.softwareplant.sw.models.swApi.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -15,8 +16,14 @@ import java.util.concurrent.CompletableFuture;
 @Service
 public class ExternalApiService {
 
-    private final RestTemplate restTemplate = new RestTemplate();
-    private final WebClient webClient = WebClient.create();
+    private final RestTemplate restTemplate;
+    private final WebClient webClient;
+
+    @Autowired
+    public ExternalApiService() {
+        webClient = WebClient.create();
+        restTemplate = new RestTemplate();
+    }
 
 
     @Async

@@ -2,8 +2,6 @@ package com.softwareplant.sw.api;
 
 import com.softwareplant.sw.models.dto.*;
 import com.softwareplant.sw.service.*;
-import com.softwareplant.sw.service.mapping.ReportMappableImpl;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/report")
-public class StarWarsApiController {
+public class StarWarsApiController implements StarWarsApi {
 
     private final ReportService reportService;
 

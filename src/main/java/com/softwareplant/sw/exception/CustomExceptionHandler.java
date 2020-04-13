@@ -54,7 +54,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(ResourceAccessException.class)
     public  ResponseEntity<Object> handleResourceAccessException(ResourceAccessException e) {
-        return buildResponseEntity(new ErrorDetails(HttpStatus.NO_CONTENT, e.getMessage(), e));
+        return buildResponseEntity(new ErrorDetails(HttpStatus.SERVICE_UNAVAILABLE, e.getMessage(), e));
     }
 
 

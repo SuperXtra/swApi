@@ -25,6 +25,4 @@ public class ReportDetails implements Serializable {
     private String characterName;
     private Long planetId;
     private String planetName;
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    private Reports reports;
 }

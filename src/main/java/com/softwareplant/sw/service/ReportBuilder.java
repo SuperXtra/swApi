@@ -7,6 +7,7 @@ import com.softwareplant.sw.models.dto.ReportDetailDto;
 import com.softwareplant.sw.models.dto.ReportDto;
 import com.softwareplant.sw.models.dto.SearchQueryDto;
 import com.softwareplant.sw.models.swApi.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Schedulers;
@@ -21,6 +22,7 @@ public class ReportBuilder {
     private final ExternalApiService externalApi;
     private final StarWarsApiConfig config;
 
+    @Autowired
     public ReportBuilder(ExternalApiService externalApi, StarWarsApiConfig config) {
         this.externalApi = externalApi;
         this.config = config;

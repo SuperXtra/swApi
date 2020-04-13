@@ -23,7 +23,7 @@ public interface StarWarsApi {
             @ApiResponse(code = 404, message = "NotFound", response = ErrorDetails.class)
     })
     @PutMapping(path = "/{reportId}", consumes = {MediaType.APPLICATION_JSON_VALUE})
-    ResponseEntity<SearchQueryDto> response(@PathVariable("reportId") Long reportId,
+    ResponseEntity<Void> response(@PathVariable("reportId") Long reportId,
                                                    @RequestBody SearchQueryDto query);
 
     @ApiOperation(value = "Deletes report with given id")
